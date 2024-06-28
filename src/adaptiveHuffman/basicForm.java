@@ -97,7 +97,6 @@ public class basicForm {
                         encodeInfoPane.setText("Error writing to file " + filePath + ": " + ex.getMessage() + "\n");
                     }
 
-                    // Example usage of Encoder and Tree classes
                     Encoder encoder = new Encoder(absolutePath, outputFilePath);
                     Tree tree = new Tree();
                     File in = new File(absolutePath);
@@ -119,7 +118,7 @@ public class basicForm {
             }
         });
 
-        // Add decodeButton action listener if needed
+
         decodeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

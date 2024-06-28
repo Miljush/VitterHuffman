@@ -31,11 +31,8 @@ public class Encoder {
     }
 
 	public void encode(Tree tree) {
-		
 		try {
-			
 			int c = 0;
-			
 			while((c = in.read()) != -1) {
 				ArrayList<Boolean> buffer = new ArrayList<Boolean>();
 				if (tree.contains(c)) {

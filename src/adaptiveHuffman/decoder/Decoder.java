@@ -28,9 +28,7 @@ public class Decoder {
     
 	public void decode(Tree tree) {
 		try {
-			
 			int c = 0;
-			
 			if(tree.isEmpty()) { // Samo ispise prvi bajt
 				int bitBuffer = 0;
 				for(int i = 0; i<8;i++) {
@@ -45,7 +43,6 @@ public class Decoder {
 			while((c = in.read()) != -1) {
 				if(c == 1) node = node.right;
 				if(c == 0) node = node.left;
-				
 				int value = 0;
 				if(node.isNYT()) {
 					value = readByte(in); 
