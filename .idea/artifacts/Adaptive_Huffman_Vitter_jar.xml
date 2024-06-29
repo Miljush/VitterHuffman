@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Adaptive-Huffman-Vitter:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Adaptive_Huffman_Vitter_jar</output-path>
+    <root id="archive" name="Adaptive-Huffman-Vitter.jar">
+      <element id="module-output" name="Adaptive-Huffman-Vitter" />
+    </root>
+  </artifact>
+</component>
