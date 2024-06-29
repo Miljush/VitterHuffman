@@ -84,11 +84,11 @@ public class basicForm {
                 if (result == JFileChooser.APPROVE_OPTION) {
                     File selectedFile = fileChooser.getSelectedFile();
                     String absolutePath = selectedFile.getAbsolutePath();
-                    String outputFilePath = "test texts/output.txt"; // Adjust output file path as needed
+                    String outputFilePath = "output.txt"; // Adjust output file path as needed
                     File file = new File(absolutePath);
                     String extension = getFileExtension(file);
                     String newExtension = "." + extension;
-                    String filePath = "test texts/ekstenzija.txt";
+                    String filePath = "ekstenzija.txt";
 
                     try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
                         writer.write(newExtension);
@@ -124,12 +124,12 @@ public class basicForm {
             public void actionPerformed(ActionEvent e) {
                 try {
                     // Read all bytes from the file and convert to string
-                    String ekstenzija = new String(Files.readAllBytes(Paths.get("test texts/ekstenzija.txt")));
-                    Decoder dec = new Decoder("test texts/output.txt","test texts/outputDecode.txt");
+                    String ekstenzija = new String(Files.readAllBytes(Paths.get("ekstenzija.txt")));
+                    Decoder dec = new Decoder("output.txt","outputDecode.txt");
                     Tree tree = new Tree();
-                    File in = new File("test texts/output.txt");
+                    File in = new File("output.txt");
                     dec.decode(tree);
-                    File out = new File("test texts/outputDecode.txt");
+                    File out = new File("outputDecode.txt");
                     long duzina=out.length();
 
                     String currentFileName = out.getName();
